@@ -48,3 +48,8 @@ body {
         display: block;
     }
 }
+
+div:first-of-type {
+    margin-right: -5px;
+    padding: 0;
+}
