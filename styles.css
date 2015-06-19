@@ -1,3 +1,44 @@
+body {
+    width: 99%;
+    height: 100%;
+    position: relative;
+}
+
 .gridCell {
     border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    display: inline-block;
+    width: 33%;
+    margin: 0px auto;
+}
+.gridCellSelected {
+    background-color: #007069;
+    color: #ba9d37;
+}
+
+#pleaseWaitMessage {
+    text-align: center;
+    height: 100%;
+    position: absolute;
+    opacity: 0.4;
+    left: 30%;
+    font-size: 5em;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .gridCell {
+        display: block;
+    }
+}
+
+@media only screen and (min-device-width: 600px){
+    .gridCell {
+        width: 49%;
+    }
 }

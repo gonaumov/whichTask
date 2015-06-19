@@ -1,10 +1,16 @@
 var multiplesCalculator = (function() {
     return {
-        findMultiples: function(inputNumber, maxNumber) {
+        findMultiples: function(inputNumber, maxNumber, calculationCallBack) {
 			var result = [], currentMultiplicand = 1;
-            return new Promise(function (resolve) {
+            var promise = new Promise(PromiseHandler);
+
+            function PromiseHandler(resolve) {
                 (function calculate() {
-				    result.push((inputNumber*currentMultiplicand));
+                    var currentNumber = (inputNumber*currentMultiplicand);
+                    if(typeof calculationCallBack === 'function') {
+                        calculationCallBack(currentNumber);
+                    }
+                    result.push(currentNumber);
                     var nextResult = inputNumber*(currentMultiplicand+1);
                     if(nextResult < maxNumber) {
                         currentMultiplicand++;
@@ -13,7 +19,9 @@ var multiplesCalculator = (function() {
                         resolve(result);
                     }
                 }());
-            });
+            };
+
+            return promise;
         }
     }
 })();

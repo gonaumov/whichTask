@@ -3,11 +3,11 @@ var gridBuilder = (function() {
         buildGrid: function(minNumber, maxNumber) {
             var promise = new Promise( function (resolve) {
                 (function divCreator() {
-                    var button = document.createElement('input');
-                    button.setAttribute('type', 'button');
-                    button.setAttribute('value', minNumber);
-                    button.setAttribute('class',this.settings.gridCellClass);
-                    document.body.appendChild(button);
+                    var newDiv = document.createElement('div');
+                    newDiv.textContent = minNumber;
+                    newDiv.setAttribute('data-number', minNumber);
+                    newDiv.setAttribute('class',this.settings.gridCellClass);
+                    document.body.appendChild(newDiv);
                     if(minNumber < maxNumber) {
                         minNumber++;
                         setTimeout(divCreator,0);
