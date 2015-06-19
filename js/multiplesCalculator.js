@@ -1,6 +1,14 @@
 var multiplesCalculator = (function() {
     return {
         findMultiples: function(inputNumber, maxNumber, calculationCallBack) {
+			if (typeof inputNumber === 'undefined' || typeof maxNumber === 'undefined') {
+					throw new Error("inputNumber and maxNumber parameters are obligatory!");
+			}
+			
+			if (typeof inputNumber !== 'number' && typeof inputNumber !== 'number') {
+				   throw new Error("inputNumber and maxNumber must be numbers!");
+			}
+			
 			var result = [], currentMultiplicand = 1;
             var promise = new Promise(PromiseHandler);
 

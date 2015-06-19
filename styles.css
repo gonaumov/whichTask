@@ -28,17 +28,23 @@ body {
     font-size: 5em;
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
+@media only screen and (max-width: 992px){
     .gridCell {
-        display: block;
+        width: 33%;
+        display: inline-block;
     }
 }
 
-@media only screen and (min-device-width: 600px){
+@media only screen and (max-width: 600px){
     .gridCell {
         width: 49%;
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .gridCell {
+        width: 100%;
+        display: block;
     }
 }
