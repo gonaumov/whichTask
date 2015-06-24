@@ -1,0 +1,55 @@
+body {
+    width: 99%;
+    height: 100%;
+    position: relative;
+}
+
+.gridCell {
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    display: inline-block;
+    width: 33%;
+    margin: 0px auto;
+}
+.gridCellSelected {
+    background-color: #007069;
+    color: #ba9d37;
+}
+
+#pleaseWaitMessage {
+    text-align: center;
+    height: 100%;
+    position: absolute;
+    opacity: 0.4;
+    left: 30%;
+    font-size: 5em;
+}
+
+@media only screen and (max-width: 992px){
+    .gridCell {
+        width: 33%;
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .gridCell {
+        width: 49%;
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .gridCell {
+        width: 100%;
+        display: block;
+    }
+}
+
+div:first-of-type {
+    margin-right: -5px;
+    padding: 0;
+}
