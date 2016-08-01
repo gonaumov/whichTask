@@ -33,4 +33,5 @@ After my publication here I got some strange feedback. Will add my answers here.
 8. Other comments: It’s nice that he separated the configuration.
   * Answer: Ha-ha.
 
+Тhe implementation of the task can be viewed live [here](http://gonaumov.github.io/whichTask/).
 I encourage people not to waste their time with this company. Other neutral programmers, who saw the task commented that the task is very good and the company is extremely incorrect.
